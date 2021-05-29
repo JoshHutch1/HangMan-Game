@@ -4,18 +4,20 @@ import random
 #welcoming the user
 name = input("What is your name? ")
 
-print("Hello, " + name, "Time to play hangman!")
+print("Hello, " + name, "are you ready!!!")
 
 print(" ")
 
-#wait for 1 second
+#1 second wait
 time.sleep(1)
 
 print("Start guessing letters...")
 time.sleep(0.5)
 
-#here we set the secret
-words = ("pyhton","coding","recycle","dawn","vision","talkative","love","difficulty","late","bake","compact","old","employee","be","bubble","guess","home","urgency","buttocks","shop","fluctuation")
+#here we set the secret words
+
+words = ("pyhton","coding","recycle","dawn","vision","talkative","love","difficulty","late","bake","compact","old","employee","be","bubble","guess","home","urgency","buttocks","shop","fluctuation",
+"snack","fling","structure","incentive","enemy","fastidious","overcharge","disagreement","consciousness")
 word = random.choice(words)
 
 #creates an variable with an empty value
@@ -32,19 +34,19 @@ while turns > 0:
     # make a counter that starts with zero
     failed = 0             
 
-    # for every character in secret_word    
+    # for every character in secret word    
     for char in word:      
 
     # see if the character is in the players guess
         if char in guesses:    
     
         # print then out the character
-            print(char)    
+            print(char, end =" ")    
 
         else:
     
         # if not found, print a dash
-            print("_")     
+            print("_", end=" ")     
        
         # and increase the failed counter with one
             failed += 1    
@@ -53,7 +55,7 @@ while turns > 0:
 
     # print You Won
     if failed == 0:        
-        print("You won")
+        print("\nYou won, The word was", word)
 
     # exit the script
         break              
@@ -61,7 +63,7 @@ while turns > 0:
     print
 
     # ask the user go guess a character
-    guess = input("guess a character:") 
+    guess = input("\nguess a character:") 
 
     # set the players guess to guesses
     guesses += guess                    
@@ -74,9 +76,11 @@ while turns > 0:
  
     # print wrong
         print("Wrong")    
- 
+
+    #prints the letters you guessed
+        print("\nYou have guessed:",guesses )
     # how many turns are left
-        print("You have", + turns, 'more guesses' )
+        print("\nYou have", + turns, 'more guesses' )
  
     # if the turns are equal to zero
         if turns == 0:           
