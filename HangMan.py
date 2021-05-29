@@ -17,7 +17,8 @@ time.sleep(0.5)
 #here we set the secret words
 
 words = ("pyhton","coding","recycle","dawn","vision","talkative","love","difficulty","late","bake","compact","old","employee","be","bubble","guess","home","urgency","buttocks","shop","fluctuation",
-"snack","fling","structure","incentive","enemy","fastidious","overcharge","disagreement","consciousness")
+"snack","fling","structure","incentive","enemy","fastidious","overcharge","disagreement","consciousness","say","modernize","hostage","window","cake","demonstration","preoccupation",
+"strikebreaker","consciousness","contradiction","entertainment","comprehensive")
 word = random.choice(words)
 
 #creates an variable with an empty value
